@@ -114,7 +114,7 @@ span{
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  box-shadow: 1px 5px 25px #b78bff;
+  /*box-shadow: 1px 5px 25px #b78bff;*/
 
 }
 .cardItem img{
@@ -127,7 +127,6 @@ span{
   font-family:  'Roboto', sans-serif;
   text-align: center;
   color: #F5FFFA ;
-  /*flex-grow: 0.1;*/
 }
 .cardItem span{
   width: 150px;
@@ -140,7 +139,6 @@ span{
   justify-content: center;
 }
 .techno p {
-  
   font-size: 12px;
   font-family:  'Roboto', sans-serif;
   text-align: center;

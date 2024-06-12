@@ -39,7 +39,7 @@ span{
   width: 300px;
   margin: auto;
   background: linear-gradient(to right, #F5FFFA 0%, #F5FFFA 50%, #B07FFD 50%, #B07FFD 100% ) !important;
-  height: 10px !important;
+  height: 2px !important;
   border-radius: 15px;
 }
 .title{
@@ -59,5 +59,6 @@ p{
   font-weight: normal;
   font-size: 17px;
   color: #F5FFFA;
+  cursor: default;
 }
 </style>

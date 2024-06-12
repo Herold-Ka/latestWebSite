@@ -16,15 +16,15 @@
           <a href="https://github.com/herold-ka " target="_blank"><img src="img/git2.png" alt="github Link"></a>
         </li>
       </ul>
-      <span class="homeNext"  @click="envoyerValeurAuParent"><p>LIRE LA SUITE</p></span>
     </div>
+    <span class="homeNext"  @click="envoyerValeurAuParent"><p>LIRE LA SUITE</p></span>
   </div>
 </template>
 <script>
 export default {
     data(){
         return{
-            valeur: 2
+            valeur: 2,
         }
     },
     methods: {
@@ -45,6 +45,10 @@ export default {
         justify-content: space-evenly;
     }
 
+    .prez {
+      height: 33%;
+      margin: auto;
+    }
     .homeImg {
         border: 1px black solid;
         border-radius: 50%;
@@ -102,4 +106,5 @@ export default {
     height: 125px;
     align-self: center;
   }
+  
 </style>

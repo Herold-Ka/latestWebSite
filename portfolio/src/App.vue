@@ -2,28 +2,35 @@
   <div class="app">
     <div class="menu">
       <ul>
-        <li>
-          <img src="img/logo.png" alt="logo" class="logo">
+        <li > 
+          <div v-on:click="selectedMenu(1)" :style="{backgroundColor: HomePage ? '#B07FFD' : 'transparent', border: HomePage ? '1px solid #F5FFFA' : 'none'}">
+            <img src="img/home.png" alt="Home"> 
+            <h1>Accueil</h1>
+          </div>
         </li>
-        <li v-on:click="selectedMenu(1)" :style="{backgroundColor: HomePage ? '#B07FFD' : 'transparent', border: HomePage ? '1px solid #F5FFFA' : 'none'}"> 
-          <img src="img/home.png" alt="Home"> 
-          <h1>Accueil</h1>
+        <li > 
+          <div v-on:click="selectedMenu(2)" :style="{backgroundColor: AboutMe ? '#B07FFD' : 'transparent', border: AboutMe ? '1px solid #F5FFFA' : 'none'}">
+            <img src="img/user.png" alt="à propos de moi icone"> 
+            <h1>A propos de moi</h1>
+          </div>
         </li>
-        <li v-on:click="selectedMenu(2)" :style="{backgroundColor: AboutMe ? '#B07FFD' : 'transparent', border: AboutMe ? '1px solid #F5FFFA' : 'none'}"> 
-          <img src="img/face.png" alt="à propos de moi icone"> 
-          <h1>A propos de moi</h1>
+        <li> 
+          <div v-on:click="selectedMenu(3)" :style="{backgroundColor: Skill ? '#B07FFD' : 'transparent', border: Skill ? '1px solid #F5FFFA' : 'none'}">
+            <img src="img/skill.png" alt="Compétences icone"> 
+            <h1>Compétences</h1>
+          </div>
         </li>
-        <li v-on:click="selectedMenu(3)" :style="{backgroundColor: Skill ? '#B07FFD' : 'transparent', border: Skill ? '1px solid #F5FFFA' : 'none'}"> 
-          <img src="img/skill_icon.png" alt="Compétences icone"> 
-          <h1>Compétences</h1>
+        <li> 
+          <div v-on:click="selectedMenu(4)" :style="{backgroundColor: Portfolio ? '#B07FFD' : 'transparent', border: Portfolio ? '1px solid #F5FFFA' : 'none'}">
+            <img src="img/bag.png" alt="Portfolio icone"> 
+            <h1>Portfolio</h1>
+          </div>
         </li>
-        <li v-on:click="selectedMenu(4)" :style="{backgroundColor: Portfolio ? '#B07FFD' : 'transparent', border: Portfolio ? '1px solid #F5FFFA' : 'none'}"> 
-          <img src="img/task.png" alt="Portfolio icone"> 
-          <h1>Portfolio</h1>
-        </li>
-        <li v-on:click="selectedMenu(5)" :style="{backgroundColor: Formation ? '#B07FFD' : 'transparent', border: Formation ? '1px solid #F5FFFA' : 'none'}"> 
-          <img src="img/mail.png" alt="Formation icone"> 
-          <h1>Formation</h1>
+        <li> 
+          <div v-on:click="selectedMenu(5)" :style="{backgroundColor: Formation ? '#B07FFD' : 'transparent', border: Formation ? '1px solid #F5FFFA' : 'none'}">
+            <img src="img/education.png" alt="Formation icone"> 
+            <h1>Formation</h1>
+          </div>
         </li>
       </ul>
     </div>
@@ -89,42 +96,44 @@ export default {
 }
   .app{
     display: flex;
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
     background-color: #343a40;
-    /*background-color: #F5FFFA;*/
+    place-content: center;
   }
   .menu{
     /*flex-grow: 1;*/
-    width: 20%;
+    width: 400px;
     display: flex;
     justify-content: center;
+    border-right: 2px solid beige;
+    padding: 20px 20px 20px 0 !important;
   }
   .menu ul{
     margin: auto;
     list-style: none;
-    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 20px 20px 20px 0 !important;
-    border-right: 2px solid #F5FFFA;
+    width: 300px;
   }
 
-  li{
+  li div{
+    height: 60px;
+    width: 100%;
     display: flex;
     justify-content: start;
     padding: 10px !important;
-    
-  }
-  li{
-    /*background-color: #F5FFFA;*/
     border-radius: 5px;
     padding: 10px !important;
     -webkit-transition-duration: 0.4s; 
+    margin: auto;
     /* Safari */
     transition-duration: 0.5s;
-    
+  }
+  li{
+    height: 80px;
+    width: 100%;
   }
 
   .logo{
@@ -132,17 +141,27 @@ export default {
     margin: auto;
   }
   li img{
-    width: 30px;
+    width: 25px;
     cursor: pointer;
+    height: auto;
+    object-fit: contain;
   }
   li h1 {
     font-family:  'Roboto', sans-serif;
     font-weight: normal;
-    font-size: 20px;
     margin: auto;
     cursor: pointer;
+    text-align: center;
+    font-family:  'Roboto', sans-serif;
+    font-weight: normal;
+    color: #F5FFFA ;
+    font-size: 15px;
   }
   .selectedMenu{
     width: 80%;   
   }
+
+  h1{
+        
+    }
 </style>

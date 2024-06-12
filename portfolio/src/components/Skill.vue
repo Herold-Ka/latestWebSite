@@ -1,7 +1,9 @@
 <template>
   <div class="divSkill">
-    <h1>Compétences</h1>
-    <span></span>
+    <div class="titreSkill">
+      <h1>Compétences</h1>
+      <span></span>
+    </div>
     <div class="divSuperior">
       <div class="cardSkillDiv" v-for="item in skillData" :key="item.id">
         <div class="cardSkill" >
@@ -95,16 +97,16 @@ h1{
 .cardSkill{
   height: 280px;
   width: 200px;
-  border: 1px #B07FFD solid;
+  border: 1.5px #B07FFD solid;
   border-radius: 7px;
   display: flex;
   flex-direction: column;
-  box-shadow: 1px 5px 25px #b78bff;
+  /*box-shadow: 1px 5px 25px #b78bff;*/
 }
 span{
   display: block;
   width: 250px;
-  margin: auto;
+  margin: 0 auto;
   background: linear-gradient(to right, #F5FFFA 0%, #F5FFFA 50%, #B07FFD 50%, #B07FFD 100% ) !important;
   height: 2px !important;
   border-radius: 15px;
